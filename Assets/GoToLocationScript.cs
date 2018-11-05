@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+
 public class GoToLocationScript : MonoBehaviour {
+    
 
     private NavMeshAgent _agent;
 
@@ -22,7 +24,7 @@ public class GoToLocationScript : MonoBehaviour {
 
             //do raycast
             RaycastHit hit;
-            if (Physics.Raycast(mouseRay, out hit, 99, LayerMask.GetMask("Default")))
+            if (Physics.Raycast(mouseRay, out hit, 99, ~LayerMask.GetMask("Player")))
                 {
                 //set agent destination
                 _agent.destination = hit.point;
