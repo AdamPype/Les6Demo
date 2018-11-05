@@ -13,6 +13,8 @@ public class GoToLocationScript : MonoBehaviour {
 	void Update () {
         //get mouse position
         Vector3 mousePos = Input.mousePosition;
-        Camera.main.ScreenPointToRay(mousePos);
+        Ray mouseRay = Camera.main.ScreenPointToRay(mousePos);
+
+
 	}
 }
